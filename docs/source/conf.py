@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'Firebird Core Development'
+copyright = '2022, Red Soft, Firebird Foundation'
+author = 'Red Soft, Firebird Foundation'
 
 release = '0.1'
 version = '0.1.0'
