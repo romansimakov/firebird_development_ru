@@ -37,3 +37,4 @@
 .. toctree::
 
    build
+   coding_stype
