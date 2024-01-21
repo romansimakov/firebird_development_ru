@@ -52,7 +52,7 @@ MS Visual Studio (Windows)
 Теперь к нему можно подключаться и выполнять запросе:
 
 .. code:: shell
-	
+
 	C:\Users\roman\firebird\temp\x64\debug\firebird
 	isql
 	SQL> connect 'localhost:C:\Users\roman\firebird\output_x64_debug\examples\empbuild\employee.fdb' user 'sysdba' password 'masterkey';
@@ -63,3 +63,4 @@ MS Visual Studio (Windows)
 .. |qt2| image:: images/ides/qt2.png
 .. |qt3| image:: images/ides/qt3.png
 .. |qt4| image:: images/ides/qt4.png
+.. _`Сборка проекта`: build.rst
