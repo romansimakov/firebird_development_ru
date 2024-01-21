@@ -95,3 +95,37 @@
 Сборка под Windows
 ------------------
 
+Сборка и разработка осуществляется в основном с использованием MS Visual Studio Community Edition.
+Поддерживается 2017 и выше. После установки с поддержкой разработки на C++, необходимо прописать переменные окружения.
+
+VS170COMNTOOLS - для сборки с помощью Visual Studio 2022.
+VS160COMNTOOLS - для сборки с помощью Visual Studio 2019.
+VS150COMNTOOLS - для сборки с помощью Visual Studio 2017.
+
+Успешность можно проверить в командной строке. Для Visual Studio 2022 например должно получится следующее.
+
+.. code:: shell
+
+    >echo %VS170COMNTOOLS%
+    C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools
+
+При сборке используются дополнительные утилиты. Один из способов их установки заключается в использовании пакета msys2. 
+Получить его можно здесь: https://www.msys2.org/
+
+После установки по умолчанию, добавить путь к исполняемым файлам ("c:\msys64\usr\bin") в переменную среды PATH.
+В результате должно получится похожее на
+
+.. code:: shell
+
+    >echo %PATH%
+    C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\msys64\usr\bin;C:\Users\roman\AppData\Local\Microsoft\WindowsApps;
+
+В извлеченном каталоге исходных кодов, перейдем в builds\win32 и выполним там команды сборки отладочной версии:
+
+.. code:: shell
+
+    cd builds\win32
+    run_all DEBUG
+
+В результате в каталоге исходных кодов должен появится каталог `output_x64_debug`.
+
