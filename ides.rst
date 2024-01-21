@@ -40,6 +40,24 @@ Qt Creator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+MS Visual Studio (Windows)
+--------------------------
+
+Перед открытием проекта в среде разработки, необходимо его собрать как описано в `Сборка под Windows`_.
+
+После сборки в MS Visual Studio необходимо открыть Firebird.sln. Назначить в качестве запускаемого проекта ``fbserver``.
+Теперь можно запустить отладчик. Каталог ``output_x64_debug`` содержит собранные из разных проектов файлы, включая демонстрационную БД employee.
+Однако сервер запуститься из каталога ``C:\Users\roman\firebird\temp\x64\debug\firebird``.
+
+Теперь к нему можно подключаться и выполнять запросе:
+
+.. code:: shell
+	
+	C:\Users\roman\firebird\temp\x64\debug\firebird
+	isql
+	SQL> connect 'localhost:C:\Users\roman\firebird\output_x64_debug\examples\empbuild\employee.fdb' user 'sysdba' password 'masterkey';
+	SQL> select * from employee;
+
 
 .. |qt1| image:: images/ides/qt1.png
 .. |qt2| image:: images/ides/qt2.png

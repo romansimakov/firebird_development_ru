@@ -64,3 +64,4 @@ LANG_ID NAME
         [ASC[ENDING] | DESC[ENDING]]
         [NULLS {FIRST | LAST}]
 
+Ссылка на другую страницу `Сборка под Windows`_.
