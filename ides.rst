@@ -53,7 +53,7 @@ MS Visual Studio (Windows)
 
 .. code:: shell
 
-	C:\Users\roman\firebird\temp\x64\debug\firebird
+	cd C:\Users\roman\firebird\temp\x64\debug\firebird
 	isql
 	SQL> connect 'localhost:C:\Users\roman\firebird\output_x64_debug\examples\empbuild\employee.fdb' user 'sysdba' password 'masterkey';
 	SQL> select * from employee;
