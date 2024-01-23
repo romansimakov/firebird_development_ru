@@ -45,7 +45,17 @@ MS Visual Studio (Windows)
 
 Перед открытием проекта в среде разработки, необходимо его собрать как описано в `Сборка проекта`_.
 
-После сборки в MS Visual Studio необходимо открыть Firebird.sln. Назначить в качестве запускаемого проекта ``fbserver``.
+После сборки в MS Visual Studio необходимо создать суперпользователя SYSDBA и задать ему пароль. Для этого выполним в каталоге, где будем запускать сервер под отладчиком:
+
+.. code:: shell
+
+	cd C:\Users\roman\firebird\temp\x64\debug\firebird
+	.\isql -user sysdba security.db
+	SQL> create user sysdba password 'masterkey';
+	SQL> quit;
+
+
+Теперь можно открыть Firebird.sln. Назначить в качестве запускаемого проекта ``fbserver``.
 Теперь можно запустить отладчик. Каталог ``output_x64_debug`` содержит собранные из разных проектов файлы, включая демонстрационную БД employee.
 Однако сервер запуститься из каталога ``C:\Users\roman\firebird\temp\x64\debug\firebird``.
 
@@ -54,9 +64,10 @@ MS Visual Studio (Windows)
 .. code:: shell
 
 	cd C:\Users\roman\firebird\temp\x64\debug\firebird
-	isql
+	.\isql
 	SQL> connect 'localhost:C:\Users\roman\firebird\output_x64_debug\examples\empbuild\employee.fdb' user 'sysdba' password 'masterkey';
 	SQL> select * from employee;
+	SQL> quit;
 
 
 .. |qt1| image:: images/ides/qt1.png
