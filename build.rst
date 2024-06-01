@@ -29,6 +29,12 @@
 Сборка под Linux
 ----------------
 
+Необходимые пакеты для сборки в Ubuntu
+
+.. code:: shell
+
+   sudo apt install git autotools-dev build-essential automake cmake libtool zlib1g-dev libicu-dev libncurses-dev libkrb5-dev
+
 Перед сборкой необходимо собрать скрипт конфигурирования "configure".
 Он генерируется с помощью скрипта ``autogen.sh``, расположенного в корневой директории исходных кодов.
 
